@@ -1,0 +1,14 @@
+<input type="number" (focus)="currentInputIndex = 0" [(ngModel)]="liczba1">
+<input type="number" (focus)="currentInputIndex = 1" [(ngModel)]="liczba2"> <br>
+<div class="digitButton">
+    <button class="smallButton" (click)="addDigital(digit)" *ngFor="let digit of digitals">{{digit}}</button>
+</div>
+<div class="buttonski">
+    <button class="smalls" (click)="sum()">Suma</button>
+    <button class="smalls" (click)="substract()">Różnica</button>
+    <button class="smalls" (click)="multiplay()">Mnożenie</button>
+    <button class="smalls" (click)="divide()">Dzielenie</button>
+</div>
+<p>Wynik:</p> 
+<p>{{output}}</p>
+
